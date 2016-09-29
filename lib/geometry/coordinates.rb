@@ -12,8 +12,8 @@ class Geometry::Coordinates
  # end
 
 def coordinates
-  @x_point = 2
-  @y_point = 4
+  @x_point = x
+  @y_point = y
 end
 
  private

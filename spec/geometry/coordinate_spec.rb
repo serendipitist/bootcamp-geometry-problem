@@ -7,5 +7,13 @@ describe Geometry::Coordinates do
       expect(point.x_point).to eq(2)
       expect(point.y_point).to eq(4)
     end
+
+    describe "#coordinates" do
+      it "should NOT Modify the abscissa and ordinate when given coordinates are (-5,4) " do
+        point = Geometry::Coordinates.new(-5, 4)
+        expect(point.x_point).to eq(-5)
+        expect(point.y_point).to eq(4)
+      end
+    end
   end
 end
