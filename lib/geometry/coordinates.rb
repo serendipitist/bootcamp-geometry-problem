@@ -1,4 +1,4 @@
-class Geometry::Point
+class Geometry::Coordinates
 
  attr_reader :x_point, :y_point
 
