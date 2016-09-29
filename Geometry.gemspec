@@ -6,7 +6,7 @@ require "Geometry/version"
 
 Gem::Specification.new do |spec|
   spec.name          = 'Geometry'
-  spec.version       = Geometry::0.1.0
+  spec.version       = Geometry::0.1.1
   spec.authors       = ["Shireesha P.S"]
   spec.email         = ["shireesha@quintype.com"]
   spec.summary       = %q{Quintype's Bootcamp Geometry Problem statement}
