@@ -2,16 +2,19 @@ class Geometry::Point
 
  attr_reader :x_point, :y_point
 
-  def initialize(x1,y1,x2,y2)
-    @x1_point = x1
-    @y1_point = y1
-    @x2_point = x2
-    @y2_point = y2
+  def initialize(x,y)
+    @x_point = x
+    @y_point = y
   end
 
- def length_between_2_points
-   2
- end
+ # def length_between_2_points
+ #   2
+ # end
+
+def coordinates
+  @x_point = 2
+  @y_point = 4
+end
 
  private
   attr_writer :x_point ,:y_point
