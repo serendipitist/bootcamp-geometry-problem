@@ -2,7 +2,7 @@ class Geometry::Point
 
  attr_reader :x_point, :y_point
 
-  def initialize(x,y)
+  def initialize(x1,y2,x2,y2)
     @x_point = x
     @y_point = y
   end
