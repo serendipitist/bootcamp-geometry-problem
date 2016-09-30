@@ -21,7 +21,13 @@ describe Geometry::Comparison do
 
     it 'should return true when both the abscissas and ordinates are same point(Reflexive property)'do
       point1 = Geometry::Comparison.new(1, 1)
-      expect(point1 == point1).to eq(true)  
+      expect(point1 == point1).to eq(true)
+    end
+
+    it 'it return true for symmetric property  for  given two points 'do
+      point1 = Geometry::Comparison.new(1, 1)
+      point2 = Geometry::Comparison.new(1, 1)
+      expect(point1 == point2 && point2 == point1).to eq(true)
     end
   end
 end
