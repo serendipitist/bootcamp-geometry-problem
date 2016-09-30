@@ -6,6 +6,11 @@ describe Geometry::Comparison do
       compare = Geometry::Comparison.new(1, 1 ,1 ,1)
       expect(compare.compare_points).to eq(true)
     end
+
+    it 'should be false when both  abscissas and ordinates are not equal' do
+      compare = Geometry::Comparison.new(1, 2 ,1 ,1)
+      expect(compare.compare_points).to eq(false)
+    end
   end
 
 end
