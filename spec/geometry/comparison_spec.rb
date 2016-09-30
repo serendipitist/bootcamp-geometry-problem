@@ -29,5 +29,12 @@ describe Geometry::Comparison do
       point2 = Geometry::Comparison.new(1, 1)
       expect(point1 == point2 && point2 == point1).to eq(true)
     end
+
+    it 'it return true for transitive property  for  given two points 'do
+      point1 = Geometry::Comparison.new(1, 1)
+      point2 = Geometry::Comparison.new(1, 1)
+      point3 = point2
+      expect(point1 == point3).to eq(true)
+    end
   end
 end
