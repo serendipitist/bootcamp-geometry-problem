@@ -2,19 +2,21 @@ require 'spec_helper'
 
 describe Geometry::Comparison do
   describe '#compare_points' do
-    it 'should be true when both  abscissas and ordinates are equal' do
-      compare = Geometry::Comparison.new(1, 1 ,1 ,1)
-      expect(compare.compare_points).to eq(true)
-    end
+    # it 'should be true when both  abscissas and ordinates are equal' do
+    #   compare = Geometry::Comparison.new(1, 1 ,1 ,1)
+    #   expect(compare.compare_points).to eq(true)
+    # end
 
-    it 'should be false when both  abscissas and ordinates are not equal' do
-      compare = Geometry::Comparison.new(1, 2 ,1 ,1)
-      expect(compare.compare_points).to eq(false)
+    it 'should be true when both  abscissas and ordinates are ' do
+      point1 = Geometry::Comparison.new(1, 2)
+      point2 = Geometry::Comparison.new(1, 2)
+
+      expect(point1 == point2).to eq(true)
     end
     it 'should be false when both  abscissas and ordinates are not equal' do
-      compare = Geometry::Comparison.new(-1, 2 ,1 ,1)
-      expect(compare.compare_points).to eq(false)
+      point1 = Geometry::Comparison.new(1, 2)
+      point2 = Geometry::Comparison.new(1, 3)
+      expect(point1 == point2).to eq(false)
     end
   end
-
 end
