@@ -33,9 +33,7 @@ describe Geometry::Comparison do
     it 'should return false when given a NIL point ' do
       point1 = Geometry::Comparison.new(1, 1)
       point2 = Geometry::Comparison.new(nil,nil)
-      expect{
-        point1 == point2
-      }.to raise_error(NoMethodError)
+      expect(point1 ==point2).to eq(false)
     end
 
   end
