@@ -2,5 +2,6 @@
 
 module Geometry; end
 
-require_relative "Geometry/version"
-require_relative "Geometry/coordinates"
+require_relative "geometry/version"
+require_relative "geometry/point"
+require_relative "geometry/line"
