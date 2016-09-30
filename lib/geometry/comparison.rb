@@ -9,6 +9,7 @@ class Geometry::Comparison
   end
 
   def ==(point2)
+    return false if point2.nil?
     self.x1==point2.x1 && self.y1 == point2.y1
   end
 end
