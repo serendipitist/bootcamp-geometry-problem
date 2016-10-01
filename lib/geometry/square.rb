@@ -6,12 +6,16 @@ class Geometry::Square
   end
 
   def perimeter
-  return Float::INFINITY if self.side <0
+  return Float::INFINITY if valid?
     4 * self.side
   end
 
   def area
-    return Float::INFINITY if self.side <0
+    return Float::INFINITY if valid?
     self.side*self.side
+  end
+
+  def valid?
+    self.side <0
   end
 end
