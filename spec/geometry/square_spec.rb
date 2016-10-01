@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Geometry::Square do
   describe '#perimeter' do
     it "should return perimeter 0 when given sides" do
-      square = Geometry::Square.new(0)
+      square = Geometry::Rectangle.create_square(0)
       expect(square.perimeter).to eq(0)
     end
 
@@ -18,7 +18,7 @@ describe Geometry::Square do
     end
   end
 
-  describe '#square' do
+  describe '#area' do
     it "should return square 0 when given sides" do
       square = Geometry::Square.new(0)
       expect(square.area).to eq(0)
