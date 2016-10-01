@@ -17,5 +17,23 @@ describe Geometry::Square do
       expect(square.perimeter).to eq(Float::INFINITY)
     end
   end
+
+  describe '#square' do
+    it "should return square 0 when given sides" do
+      square = Geometry::Square.new(0)
+      expect(square.area).to eq(0)
+    end
+
+    it "should return square when given valid side" do
+      square = Geometry::Square.new(2)
+      expect(square.area).to eq(4)
+    end
+
+    it "should return infinity when given side is less than zero" do
+      square = Geometry::Square.new(-2)
+      expect(square.area).to eq(Float::INFINITY)
+    end
+  end
 end
+
 
