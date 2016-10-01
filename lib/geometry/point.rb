@@ -1,11 +1,28 @@
 class Geometry::Point
+  attr_reader :abscissa, :ordinate
 
- attr_reader :x_abscissa, :y_ordinate
-
-  def initialize(abscissa,ordinate)
-    @x_abscissa = abscissa
-    @y_ordinate = ordinate
+  def initialize(abscissa, ordinate)
+    @abscissa = abscissa
+    @ordinate = ordinate
   end
 
-end
+  def ==(other)
+    if !other.instance_of?(self.class)
+      false
+    elsif self.equal?(other)
+      true
+    else
+      self.abscissa == other.abscissa && self.ordinate == other.ordinate
+    end
+  end
 
+  def hash
+    [self.abscissa, self.ordinate].hash * 31
+  end
+
+  def distance_between_points(point2)
+    1
+  end
+
+  alias :eql? :==
+end

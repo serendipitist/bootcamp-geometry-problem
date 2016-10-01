@@ -1,6 +1,6 @@
-class Geometry::Line
+class Geometry::Distance
 
-  attr_reader :x1,:y1,:x2,:y2
+  attr_reader :abscissa,:ordinate,:x2,:y2
 
   def initialize(x1,y1,x2,y2)
     @x1 = x1
