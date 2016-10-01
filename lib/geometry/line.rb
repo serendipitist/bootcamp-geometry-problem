@@ -14,4 +14,18 @@ class Geometry::Distance
     Math.sqrt(square_of_length)
   end
 
+  # Note :belong to point class
+  # def ==(other)
+  #   if !other.instance_of?(self.class)
+  #     false
+  #   elsif self.equal?(other)
+  #     true
+  #   else
+  #     self.abscissa == other.abscissa && self.ordinate == other.ordinate
+  #   end
+  # end
+  #
+  # def hash
+  #   [self.abscissa, self.ordinate].hash * 31
+  # end
 end
