@@ -7,7 +7,7 @@ class Geometry::Rectangle
   end
 
   def perimeter
-   if self.length > 0 && self.width > 0
+   if valid?
      (self.length + self.width) * 2
     else
       Float::INFINITY
@@ -15,13 +15,16 @@ class Geometry::Rectangle
   end
 
   def area
-    if self.length > 0 && self.width > 0
+    if valid?
       self.length * self.width
     else
       Float::INFINITY
     end
-
-
   end
+
+  def valid?
+    self.length > 0 && self.width >0
+  end
+
 
   end
